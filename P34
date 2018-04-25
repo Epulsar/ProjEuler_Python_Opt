@@ -1,0 +1,15 @@
+import math
+from decimal import *
+getcontext().prec = 10000
+def sum(n):
+  c = 0
+  for i in list(n):
+    c += Decimal(math.factorial(int(i)))
+  return c
+def main():
+  count = []
+  for a in range(3, 10000000):
+    if a == int(sum(str(a))):
+      count.append(a)
+  return count
+print(main())
