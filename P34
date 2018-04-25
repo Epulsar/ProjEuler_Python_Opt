@@ -7,9 +7,9 @@ def sum(n):
     c += Decimal(math.factorial(int(i)))
   return c
 def main():
-  count = []
+  count = 0
   for a in range(3, 10000000):
     if a == int(sum(str(a))):
-      count.append(a)
+      count += a
   return count
 print(main())
